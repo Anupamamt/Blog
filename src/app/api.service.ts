@@ -4,10 +4,10 @@ import{HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class ApiService {
-
+   server_address:string="api"
   constructor(private http:HttpClient) { }
 
   getBlog(){
-    return this.http.get('http://localhost:3000/aboutMaths')
+    return this.http.get(`${this.server_address}/aboutMaths`)
   }
 }

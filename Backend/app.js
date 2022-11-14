@@ -12,6 +12,8 @@ app.use(logger('dev'))
 const PORT=3000;
 
 
+const path = require('path');
+app.use(express.static('./dist/blog'));
 
 
 const mongoose=require("mongoose")
@@ -28,7 +30,7 @@ const BLOG_DETAILS=require('./models/model')
 
 
 
-app.get('/aboutMaths',async(req,res)=>{
+app.get('/api/aboutMaths',async(req,res)=>{
     try{
      const list=await BLOG_DETAILS.find()
      res.send(list)
@@ -39,7 +41,7 @@ app.get('/aboutMaths',async(req,res)=>{
   })
 
 
-  app.get('/aboutMaths/comments',async(req,res)=>{
+  app.get('/api/aboutMaths/comments',async(req,res)=>{
     try{
      const list=await BLOG_DETAILS.find()
      res.send(list)
@@ -50,7 +52,7 @@ app.get('/aboutMaths',async(req,res)=>{
   })
 
 
-  app.post('/aboutMaths',async(req,res)=>{
+  app.post('/api/aboutMaths',async(req,res)=>{
     try{
    let item={
     blogName:req.body.blogName,
@@ -70,7 +72,11 @@ res.send(saveblog)
   }
 })
 
-app.listen(PORT,()=>{
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/blog/index.html'));
+ });
+
+app.listen(process.env.PORT || 3000,()=>{
     console.log("The app is listening to port 3000");
 })
 
