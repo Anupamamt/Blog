@@ -1,0 +1,27 @@
+.col-sm-6{
+    margin-top: 30px;
+}
+h1{
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.col-lg-6,.col-sm-6{
+    /* border: 2px solid red; */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.about{
+    margin-left: 20px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+.pic{
+    width: 40%;
+    margin-left: 10px;
+}
+#prof{
+
+  height:200px;
+}

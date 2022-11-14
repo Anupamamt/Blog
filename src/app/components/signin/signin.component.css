@@ -1,0 +1,40 @@
+.reg{
+    width:58%;
+    background-color: rgb(46, 126, 28);
+    margin-left: 270px;
+    height: 400px;
+    margin-top: 50px;
+}
+input{
+    width:50%;
+    height: 30px;
+    margin-left: 80px;
+}
+h2{
+    color: antiquewhite;
+    text-align: center;
+}
+label{
+    color: antiquewhite;
+    margin-left: 80px;
+}
+.mb-3{
+    margin-left: 145px;
+}
+.file-upload{
+    margin-left: 145px;
+}
+button{
+    margin-left: 330px;
+    padding:10px;
+    color: white;
+    background-color: black;
+}
+a{
+    color: white;
+    margin-left: 250px;
+}
+#up{
+    color: white;
+    text-decoration: none;
+}

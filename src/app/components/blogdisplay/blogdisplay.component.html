@@ -1,0 +1,22 @@
+<div class="container" *ngFor="let blog of blogs">
+    <h1>{{blog.postTitle}}</h1>
+
+    <div class="row author">
+        <div class="col-lg-6 col-sm-6">
+            By sanjiv sankaran
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            posted on {{blog.postDate}}
+        </div>
+    </div>
+    <div class="row content">
+        <p>{{blog.description}}</p>
+   <br>
+        </div>
+    <div class="row">
+        <a id="btn-cmnt" routerLink="comments" class="btn btn-primary">Read comments</a>
+        <router-outlet></router-outlet>
+        <a id="btn-nxt" class=" btn btn-primary">Next</a>
+    </div>
+</div>
+
