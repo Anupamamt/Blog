@@ -13,7 +13,7 @@ const PORT=3000;
 
 
 const path = require('path');
-app.use(express.static('./dist/blog'));
+app.use(express.static('./dist/blog'))
 
 
 const mongoose=require("mongoose")
