@@ -18,4 +18,5 @@ export class CommentsComponent implements OnInit {
       this.blogs=res
       console.log(res)
     })
-}}
+}
+}
